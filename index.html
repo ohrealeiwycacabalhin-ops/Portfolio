@@ -784,4 +784,333 @@
       <button class="filter-btn" data-category="tools">🛠️ Tools & Training</button>
     </div>
 
-    <div class="skills-grid" id="ski
+    <div class="skills-grid" id="skillsGrid">
+      <div class="skill-card" data-category="tech">
+        <span class="skill-name">Basic Java Programming</span>
+        <span class="level">Intermediate</span>
+      </div>
+      <div class="skill-card" data-category="tools">
+        <span class="skill-name">Microsoft Excel</span>
+        <span class="level">Intermediate</span>
+      </div>
+      <div class="skill-card" data-category="tech">
+        <span class="skill-name">Information Management</span>
+        <span class="level">Intermediate</span>
+      </div>
+      <div class="skill-card" data-category="tech">
+        <span class="skill-name">SQL & Database Fundamentals</span>
+        <span class="level">Intermediate</span>
+      </div>
+      <div class="skill-card" data-category="tech">
+        <span class="skill-name">Troubleshooting & Debugging</span>
+        <span class="level">Intermediate</span>
+      </div>
+      <div class="skill-card" data-category="soft">
+        <span class="skill-name">Adaptability</span>
+        <span class="level">Student Level</span>
+      </div>
+      <div class="skill-card" data-category="soft">
+        <span class="skill-name">Problem Solving</span>
+        <span class="level">Student Level</span>
+      </div>
+      <div class="skill-card" data-category="soft">
+        <span class="skill-name">Critical Thinking</span>
+        <span class="level">Student Level</span>
+      </div>
+      <div class="skill-card" data-category="soft">
+        <span class="skill-name">Teamwork</span>
+        <span class="level">Student Level</span>
+      </div>
+      <div class="skill-card" data-category="tools">
+        <span class="skill-name">Computer System Servicing (NC II)</span>
+        <span class="level">TESDA Cert.</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="awards" class="tab-section">
+    <h2 class="section-title">Honors & Awards</h2>
+    <div class="awards-list">
+      <div class="award-card">
+        <div class="award-icon">🏆</div>
+        <div class="award-info">
+          <h3>With Honors</h3>
+          <p>Holy Rosary Academy of Las Piñas City (2023–2024)</p>
+        </div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">🏆</div>
+        <div class="award-info">
+          <h3>With Honors</h3>
+          <p>CAA National High School Annex (2022–2023)</p>
+        </div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">🌟</div>
+        <div class="award-info">
+          <h3>Most Dependable</h3>
+          <p>Holy Rosary Academy of Las Piñas City (2023–2024)</p>
+        </div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">🎖️</div>
+        <div class="award-info">
+          <h3>Leadership Award</h3>
+          <p>CAA National High School Annex (2022–2023)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="tab-section">
+    <h2 class="section-title">Experience & Training</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Student Developer</h3>
+        <div class="company">Dr. Filemon C. Aguilar Memorial College of Las Piñas</div>
+        <div class="date">2024 - 2029</div>
+        <ul>
+          <li>Developed a Calculator Application using Java for arithmetic operations.</li>
+          <li>Designed a Student Information System to manage and organize student records efficiently.</li>
+          <li>Collaborated with peers to debug, test, and document code for functionality and usability.</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <h3>Computer System Servicing NC II (Training)</h3>
+        <div class="company">TESDA Technology Institution (NCR/Metro Manila)</div>
+        <div class="date">March 2025 (160 Hours)</div>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Completed 160 hours of professional technical training.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="tab-section">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Let's Connect</h3>
+        <p>Eager to apply analytical thinking, adaptability, and teamwork in contributing to innovative software and system development projects.</p>
+        <div class="contact-methods">
+          <a href="mailto:ohrealeiwycacabalhin@gmail.com" class="contact-item">📧 ohrealeiwycacabalhin@gmail.com</a>
+          <a href="tel:09288641890" class="contact-item">📞 09288641890</a>
+          <span class="contact-item">📍 #1152 Calamansi St., BF International Village, Las Piñas City</span>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Message Sent! Thank you for reaching out.');">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <textarea rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message 🚀</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Ohrealei Wyc A. Cabalhin. All rights reserved.</p>
+  </footer>
+
+  <script>
+    class SoundEffects {
+      constructor() { this.ctx = null; }
+      init() { if (!this.ctx) this.ctx = new (window.AudioContext || window.webkitAudioContext)(); }
+      playPop(freq = 450, type = 'sine', duration = 0.08) {
+        try {
+          this.init();
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = type;
+          osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(freq * 1.8, this.ctx.currentTime + duration);
+          gain.gain.setValueAtTime(0.12, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + duration);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start();
+          osc.stop(this.ctx.currentTime + duration);
+        } catch(e) {}
+      }
+      playClick() { this.playPop(580, 'triangle', 0.1); }
+      playHover() { this.playPop(320, 'sine', 0.05); }
+      playToggle() { this.playPop(700, 'sine', 0.12); }
+    }
+
+    const sfx = new SoundEffects();
+
+    const navItems = document.querySelectorAll('.nav-link-item, .logo');
+    const tabSections = document.querySelectorAll('.tab-section');
+    const navLinksContainer = document.getElementById('navLinks');
+    const menuToggle = document.getElementById('menuToggle');
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+
+    /* MOBILE NAVIGATION MENU TOGGLE */
+    if (menuToggle) {
+      menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sfx.playClick();
+        navLinksContainer.classList.toggle('active');
+        menuToggle.textContent = navLinksContainer.classList.contains('active') ? '✕' : '☰';
+      });
+    }
+
+    /* THEME SWITCHER TOGGLE */
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sfx.playToggle();
+        const isLight = document.body.getAttribute('data-theme') === 'light';
+        if (isLight) {
+          document.body.removeAttribute('data-theme');
+          themeIcon.textContent = '🌙';
+          themeText.textContent = 'Dark';
+        } else {
+          document.body.setAttribute('data-theme', 'light');
+          themeIcon.textContent = '☀️';
+          themeText.textContent = 'Light';
+        }
+      });
+    }
+
+    /* NAVIGATION TAB SWITCHING */
+    navItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        sfx.playClick();
+        
+        const targetId = item.getAttribute('data-target');
+
+        tabSections.forEach(sec => sec.classList.remove('active-section'));
+        const activeSec = document.getElementById(targetId);
+        if (activeSec) activeSec.classList.add('active-section');
+
+        document.querySelectorAll('.nav-link-item').forEach(nl => nl.classList.remove('active-tab'));
+        if (item.classList.contains('nav-link-item')) {
+          item.classList.add('active-tab');
+        } else {
+          const defaultTab = document.querySelector('[data-target="about"]');
+          if (defaultTab) defaultTab.classList.add('active-tab');
+        }
+
+        if (navLinksContainer && navLinksContainer.classList.contains('active')) {
+          navLinksContainer.classList.remove('active');
+          if (menuToggle) menuToggle.textContent = '☰';
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    /* SKILLS FILTERING */
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const skillCards = document.querySelectorAll('.skill-card');
+    const skillCounter = document.getElementById('skillCounter');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('mouseenter', () => sfx.playHover());
+      btn.addEventListener('click', () => {
+        sfx.playClick();
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const category = btn.getAttribute('data-category');
+        let visibleCount = 0;
+
+        skillCards.forEach(card => {
+          const match = category === 'all' || card.getAttribute('data-category') === category;
+          if (match) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (skillCounter) {
+          skillCounter.textContent = `${visibleCount} Skill${visibleCount !== 1 ? 's' : ''} Visible`;
+        }
+      });
+    });
+
+    /* CARD TILT EFFECTS & AUDIO FEEDBACK */
+    document.querySelectorAll('.skill-card, .card-item, .award-card, .timeline-item').forEach(card => {
+      card.addEventListener('mouseenter', () => sfx.playHover());
+      card.addEventListener('click', () => sfx.playClick());
+
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        card.style.transform = `perspective(1000px) rotateX(${-y / 10}deg) rotateY(${x / 10}deg) scale(1.02)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+      });
+    });
+
+    /* PARTICLES CANVAS ANIMATION */
+    const canvas = document.getElementById('bgCanvas');
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      const particleCount = 35;
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
+      class Particle {
+        constructor() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.radius = Math.random() * 3 + 1;
+          this.vx = (Math.random() - 0.5) * 0.8;
+          this.vy = (Math.random() - 0.5) * 0.8;
+          this.color = Math.random() > 0.5 ? 'rgba(0, 240, 255, 0.35)' : 'rgba(176, 38, 255, 0.35)';
+        }
+
+        update() {
+          this.x += this.vx;
+          this.y += this.vy;
+          if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+          if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+        }
+
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.fill();
+        }
+      }
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+          p.update();
+          p.draw();
+        });
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    }
+  </script>
+</body>
+</html>
