@@ -1044,7 +1044,7 @@
           <input type="text" placeholder="Your Name" required />
         </div>
         <div class="form-group">
-          <input type="email" placeholder="Your Email" required />
+          <input type="email" placeholder="Your" required />
         </div>
         <div class="form-group">
           <textarea rows="4" placeholder="Enter your message or project inquiry here..." required></textarea>
@@ -1138,7 +1138,6 @@
       });
     }
 
-    // INSTANT JUMP NAVIGATION & ACTIVE HIGHLIGHT
     navItems.forEach(item => {
       item.addEventListener('click', (e) => {
         e.preventDefault();
@@ -1226,7 +1225,6 @@
           card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
         }, 120);
 
-        // Remove lighting up effect and reset position smoothly
         setTimeout(() => {
           card.classList.remove('clicked-light-up');
           card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
